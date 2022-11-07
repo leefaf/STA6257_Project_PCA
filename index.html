@@ -201,14 +201,12 @@ M_n(x) = \sum_{i=1}^{n} W_n (X_i) Y_i  \tag{1}
 <p><span style="color: #8B814C;">Bacteria dataset from MASS package (220 rows X 6 columns)</span></p>
 <p><span style="color: #8B814C;">Dr A. Leach tested the effects of a drug on 50 children with a history of otitis media in the Northern Territory of Australia. The children were randomized to the drug or the a placebo, and also to receive active encouragement to comply with taking the drug. The presence of H. influenzae was checked at weeks 0, 2, 4, 6 and 11: 30 of the checks were missing and are not included in this data frame.</span></p>
 <p><span style="color: #8B814C;"><strong>Variables</strong></span></p>
-<ul>
-<li>y - presence or absence: a factor with levels n and y</li>
-<li>ap - active/placebo: a factor with levels a and p</li>
-<li>hilo - hi/low compliance: a factor with levels hi amd lo</li>
-<li>week - numeric: week of test</li>
-<li>ID - subject ID: a factor</li>
-<li>trt - a factor with levels placebo, drug and drug+, a re-coding of ap and hilo</li>
-</ul>
+<p><span style="color: #8B814C;"><strong>y</strong> - presence or absence: a factor with levels n and y</span></p>
+<p><span style="color: #8B814C;"><strong>ap</strong> - active/placebo: a factor with levels a and p</span></p>
+<p><span style="color: #8B814C;"><strong>hilo</strong> - hi/low compliance: a factor with levels hi amd lo</span></p>
+<p><span style="color: #8B814C;"><strong>week</strong> - numeric: week of test</span></p>
+<p><span style="color: #8B814C;"><strong>ID</strong> - subject ID: a factor</span></p>
+<p><span style="color: #8B814C;"><strong>trt</strong> - a factor with levels placebo, drug and drug+, a re-coding of ap and hilo</span></p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -217,97 +215,102 @@ M_n(x) = \sum_{i=1}^{n} W_n (X_i) Y_i  \tag{1}
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Data</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(murders))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(bacteria))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
 <tr class="header">
-<th style="text-align: left;">state</th>
-<th style="text-align: left;">abb</th>
-<th style="text-align: left;">region</th>
-<th style="text-align: right;">population</th>
-<th style="text-align: right;">total</th>
+<th style="text-align: left;">y</th>
+<th style="text-align: left;">ap</th>
+<th style="text-align: left;">hilo</th>
+<th style="text-align: right;">week</th>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">trt</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Alabama</td>
-<td style="text-align: left;">AL</td>
-<td style="text-align: left;">South</td>
-<td style="text-align: right;">4779736</td>
-<td style="text-align: right;">135</td>
+<td style="text-align: left;">y</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">hi</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">X01</td>
+<td style="text-align: left;">placebo</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Alaska</td>
-<td style="text-align: left;">AK</td>
-<td style="text-align: left;">West</td>
-<td style="text-align: right;">710231</td>
-<td style="text-align: right;">19</td>
+<td style="text-align: left;">y</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">hi</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">X01</td>
+<td style="text-align: left;">placebo</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Arizona</td>
-<td style="text-align: left;">AZ</td>
-<td style="text-align: left;">West</td>
-<td style="text-align: right;">6392017</td>
-<td style="text-align: right;">232</td>
+<td style="text-align: left;">y</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">hi</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">X01</td>
+<td style="text-align: left;">placebo</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Arkansas</td>
-<td style="text-align: left;">AR</td>
-<td style="text-align: left;">South</td>
-<td style="text-align: right;">2915918</td>
-<td style="text-align: right;">93</td>
+<td style="text-align: left;">y</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">hi</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">X01</td>
+<td style="text-align: left;">placebo</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">California</td>
-<td style="text-align: left;">CA</td>
-<td style="text-align: left;">West</td>
-<td style="text-align: right;">37253956</td>
-<td style="text-align: right;">1257</td>
+<td style="text-align: left;">y</td>
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">hi</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">X02</td>
+<td style="text-align: left;">drug+</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Colorado</td>
-<td style="text-align: left;">CO</td>
-<td style="text-align: left;">West</td>
-<td style="text-align: right;">5029196</td>
-<td style="text-align: right;">65</td>
+<td style="text-align: left;">y</td>
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">hi</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">X02</td>
+<td style="text-align: left;">drug+</td>
 </tr>
 </tbody>
 </table>
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ggplot1 <span class="ot">=</span> murders <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, <span class="at">y=</span>total)) </span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ggplot1 = murders %&gt;% ggplot(mapping = aes(x=population/10^6, y=total)) </span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  ggplot1 <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">col=</span>region), <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label=</span>abb)) <span class="sc">+</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> <span class="st">"y~x"</span>, <span class="at">method=</span>lm,<span class="at">se =</span> F)<span class="sc">+</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Populations in millions (log10 scale)"</span>) <span class="sc">+</span> </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Total number of murders (log10 scale)"</span>) <span class="sc">+</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"US Gun Murders in 2010"</span>) <span class="sc">+</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="at">name =</span> <span class="st">"Region"</span>)<span class="sc">+</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_wsj</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggplot1 + geom_point(aes(col=region), size = 4) +</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_text_repel(aes(label=abb)) +</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_x_log10() +</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_y_log10() +</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_smooth(formula = "y~x", method=lm,se = F)+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#xlab("Populations in millions (log10 scale)") + </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ylab("Total number of murders (log10 scale)") +</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggtitle("US Gun Murders in 2010") +</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_color_discrete(name = "Region")+</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#    theme_wsj()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<section id="statistical-modeling" class="level3">
-<h3 class="anchored" data-anchor-id="statistical-modeling"><span style="color: #191970;">Statistical Modeling</span></h3>
 </section>
-<section id="conlusion" class="level3">
-<h3 class="anchored" data-anchor-id="conlusion"><span style="color: #191970;">Conlusion</span></h3>
+<section id="statistical-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-modeling"><span style="color: #191970;">Statistical Modeling</span></h2>
 </section>
+<section id="conlusion" class="level2">
+<h2 class="anchored" data-anchor-id="conlusion"><span style="color: #191970;">Conlusion</span></h2>
 </section>
 <section id="references" class="level2 unnumbered">
 

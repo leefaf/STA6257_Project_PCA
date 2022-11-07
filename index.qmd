@@ -163,13 +163,21 @@ frame.]{style="color: #8B814C;"}
 
 [**Variables**]{style="color: #8B814C;"}
 
--   y - presence or absence: a factor with levels n and y
--   ap - active/placebo: a factor with levels a and p
--   hilo - hi/low compliance: a factor with levels hi amd lo
--   week - numeric: week of test
--   ID - subject ID: a factor
--   trt - a factor with levels placebo, drug and drug+, a re-coding of
-    ap and hilo
+[**y** - presence or absence: a factor with levels n and
+y]{style="color: #8B814C;"}
+
+[**ap** - active/placebo: a factor with levels a and
+p]{style="color: #8B814C;"}
+
+[**hilo** - hi/low compliance: a factor with levels hi amd
+lo]{style="color: #8B814C;"}
+
+[**week** - numeric: week of test]{style="color: #8B814C;"}
+
+[**ID** - subject ID: a factor]{style="color: #8B814C;"}
+
+[**trt** - a factor with levels placebo, drug and drug+, a re-coding of
+ap and hilo]{style="color: #8B814C;"}
 
 ```{r, warning=FALSE, echo=T, message=FALSE}
 # loading packages 
@@ -178,28 +186,29 @@ library(knitr)
 library(ggthemes)
 library(ggrepel)
 library(dslabs)
+library(MASS)
 ```
 
 ```{r, warning=FALSE, echo=TRUE}
 # Load Data
-kable(head(murders))
+kable(head(bacteria))
 
-ggplot1 = murders %>% ggplot(mapping = aes(x=population/10^6, y=total)) 
+#ggplot1 = murders %>% ggplot(mapping = aes(x=population/10^6, y=total)) 
 
-  ggplot1 + geom_point(aes(col=region), size = 4) +
-  geom_text_repel(aes(label=abb)) +
-  scale_x_log10() +
-  scale_y_log10() +
-  geom_smooth(formula = "y~x", method=lm,se = F)+
-  xlab("Populations in millions (log10 scale)") + 
-  ylab("Total number of murders (log10 scale)") +
-  ggtitle("US Gun Murders in 2010") +
-  scale_color_discrete(name = "Region")+
-      theme_wsj()
+  #ggplot1 + geom_point(aes(col=region), size = 4) +
+  #geom_text_repel(aes(label=abb)) +
+  #scale_x_log10() +
+  #scale_y_log10() +
+  #geom_smooth(formula = "y~x", method=lm,se = F)+
+  #xlab("Populations in millions (log10 scale)") + 
+  #ylab("Total number of murders (log10 scale)") +
+  #ggtitle("US Gun Murders in 2010") +
+  #scale_color_discrete(name = "Region")+
+  #    theme_wsj()
 ```
 
-### [Statistical Modeling]{style="color: #191970;"}
+## [Statistical Modeling]{style="color: #191970;"}
 
-### [Conlusion]{style="color: #191970;"}
+## [Conlusion]{style="color: #191970;"}
 
 ## [References]{style="color: #191970;"}
