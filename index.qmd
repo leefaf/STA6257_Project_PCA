@@ -1,6 +1,6 @@
 ---
-title: "Final Project"
-author: "PCA (principal component analysis"
+title: "PCA (principal component analysis)"
+author: "Brandy, Lee, Tavish"
 date: '`r Sys.Date()`'
 format:
   html:
@@ -9,8 +9,12 @@ format:
 course: STA 6257 - Advance Statistical Modeling
 bibliography: references.bib # file contains bibtex for references
 always_allow_html: true # this allows to get PDF with HTML features
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
+```{=html}
 <style>
  .title {
     color: #191970;    
@@ -28,64 +32,124 @@ always_allow_html: true # this allows to get PDF with HTML features
     background-color: #FAFAF5;
   }
 </style>
+```
+## [Introduction]{style="color: #191970;"}
 
+[**1. A comparative dimensionality reduction study in telecom customer
+segmentation using deep learning and PCA**]{style="color: #8B814C;"}
 
-## Introduction
+[ This article compares PCA with a deep learning autoencoder on telecom
+customer data. Goal is to segment customers based on 220 features to
+optimize customer satisfaction/loyalty. Raw data must be cleaned &
+standardized (z-score normalization) before applying PCA. A scree plot
+was used to visualize the number of features to keep, which was 3 that
+explain \~72% of data. Using the absolute values of the eigenvectors
+they can decide wich features contribute the most to the first 3 PC's.
+Overall PCA saved \~90% of total variance with just 20 features,
+reducing original dataset by 200. [@Alkha] ]{style="color: #8B814C;"}
 
-<span style="color: #8B814C;">**1. A comparative dimensionality reduction study in telecom customer segmentation using deep learning and PCA**</span>
+[**2. Visualizing Psychological Networks: A Tutorial in
+R**]{style="color: #8B814C;"}
 
-<span style="color: #8B814C;">
-This article compares PCA with a deep learning autoencoder on telecom customer data. Goal is to segment customers based on 220 features to optimize customer satisfaction/loyalty. Raw data must be cleaned & standardized (z-score normalization) before applying PCA. A scree plot was used to visualize the number of features to keep, which was 3 that explain ~72% of data. Using the absolute values of the eigenvectors they can decide wich features contribute the most to the first 3 PC's. Overall PCA saved ~90% of total variance with just 20 features, reducing original dataset by 200.  [@Alkha]
-</span>
+[ Article aims to guide researchers on choosing the best/most
+interpretable visualizations of psychological networks. These networks
+include mental disorder symptoms (specifically OCD and depression) and
+the connections/correlations between them. When plotting, the symptoms
+are referred to as nodes and their connections as edges. The article
+goes on to compare 4 different plotting approaches; force-directed
+algorithms, multidimensional scaling, PCA, and eigenmodels. 6 different
+benefits were used as a checklist for all 4 approches. Benefits include:
+node placement is meaningful, useful for comparing replications,
+distances between nodes is interpretable, X/Y placement of nodes is
+interpretable, can be based on any network, central nodes in the center.
+PCA checks 3 of the 6 benefits, node placement is meaningful, useful for
+comparing replications, and X/Y placement of nodes is interpretable
+(this being the primary benefit since nodes/symptoms can be compared
+right to left, X, or top from bottom Y). 1 major disadvantage of PCA is
+that it relies on the correlation matrix and nodes/symptoms can be
+difficult to see when they score similarly on both PC's. [@Jones]
+]{style="color: #8B814C;"}
 
+[**3. SVM and PCA Based Learning Feature Classification Approaches for
+E-Learning System**]{style="color: #8B814C;"}
 
-<span style="color: #8B814C;">**2. Visualizing Psychological Networks: A Tutorial in R**</span>
+[ This article aims to classify student learning attributes using PCA in
+order to develop a simple methodology to optimize a students dynamic
+learning sequence based on their individual skill, needs and
+preferences, and also to maximize their learning outcome in computer
+programming courses (java, C). The study uses 8 different learning
+attributes; anxiety, personality, learning style, cognitive style,
+grades from prev. semester, motivation, study level, and student prior
+knowledge. 100 students taking C programming course were used in the
+present study. Each student filled out a questionairre to gather
+information on the 8 learning attributes. They each took a 20 question
+midterm and also a final that scored their capabilities in 3 areas;
+syntax, logical, and application (each score was divided into low, med,
+and high categories). For this study, 3 PC's were kept & used for
+classification purposes and explain \~77% of the variance. From figure 5
+it looks like the first PC is comprised of 3 main learning attributes
+prior knowledge, learning style, and personality. Second PC groups
+motivation, cognitive style, and grades from prev. semester. Third PC
+groups anxiety with study level. The article then goes on to use the 3
+PC's to fit 4 classification models, a neural network, quadratic SVM,
+gaussian SVM, and linear SVM. Linear SVM provided the highest accuracy,
+sensitivity, and specificity, outperforming the other kernal
+classifiers. [@Khamp] ]{style="color: #8B814C;"}
 
-<span style="color: #8B814C;">
-Article aims to guide researchers on choosing the best/most interpretable visualizations of psychological networks. These networks include mental disorder symptoms (specifically OCD and depression) and the connections/correlations between them. When plotting, the symptoms are referred to as nodes and their connections as edges. The article goes on to compare 4 different plotting approaches; force-directed algorithms, multidimensional scaling, PCA, and eigenmodels. 6 different benefits were used as a checklist for all 4 approches. Benefits include: node placement is meaningful, useful for comparing replications, distances between nodes is interpretable, X/Y placement of nodes is interpretable, can be based on any network, central nodes in the center. PCA checks 3 of the 6 benefits, node placement is meaningful, useful for comparing replications, and X/Y placement of nodes is interpretable (this being the primary benefit since nodes/symptoms can be compared right to left, X, or top from bottom Y). 1 major disadvantage of PCA is that it relies on the correlation matrix and nodes/symptoms can be difficult to see when they score similarly on both PC's.  [@Jones]
-</span>
+[**4. Applied Multivariate Statistical Analysis and Related Topics with
+R**]{style="color: #8B814C;"}
 
+[ This chapter goes over PCA basic's and how and why it is useful. The
+overall goal of PCA is to minimize the number of predictive variables
+while maintaining most of the variation (70%\~80% as a guideline, the
+book goes on to cover a few more rules of thumb for this). PCA is a good
+method for finding outliers since the principal components are linear
+combinations of the original data - plotting with lower dimensions makes
+them easier to spot. PCA is also useful when some of the predictor
+variables in a regression model are highly correlated, which if not
+addressed can lead to poor parameter estimates. The first PC explains
+the most variability in the data & each succeeding PC explains the most
+possible remaining variability. PCA analysis should be preformed on
+scaled/unit data, magnitudes must be comparable (use the correlation
+matrix instead of covariance OR standardize the data).
+[@lang2021applied] ]{style="color: #8B814C;"}
 
-<span style="color: #8B814C;">**3. SVM and PCA Based Learning Feature Classification Approaches for E-Learning System**</span>
+[**5. The fixed effects PCA model in a common principal component
+environment**]{style="color: #8B814C;"}
 
-<span style="color: #8B814C;">
-This article aims to classify student learning attributes using PCA in order to develop a simple methodology to optimize a students dynamic learning sequence based on their individual skill, needs and preferences, and also to maximize their learning outcome in computer programming courses (java, C). The study uses 8 different learning attributes; anxiety, personality, learning style, cognitive style, grades from prev. semester, motivation, study level, and student prior knowledge. 100 students taking C programming course were used in the present study. Each student filled out a questionairre to gather information on the 8 learning attributes. They each took a 20 question midterm and also a final that scored their capabilities in 3 areas; syntax, logical, and application (each score was divided into low, med, and high categories). For this study, 3 PC's were kept & used for classification purposes and explain ~77% of the variance. From figure 5 it looks like the first PC is comprised of 3 main learning attributes prior knowledge, learning style, and personality. Second PC groups motivation, cognitive style, and grades from prev. semester. Third PC groups anxiety with study level. The article then goes on to use the 3 PC's to fit 4 classification models, a neural network, quadratic SVM, gaussian SVM, and linear SVM. Linear SVM provided the highest accuracy, sensitivity, and specificity, outperforming the other kernal classifiers. [@Khamp]
-</span> 
+[ The article compares a fixed effects PCA model to the 2 most common
+approaches, descriptive algebraic and probabilistic. All three produce
+the same results using spectral decomposition of the sample covariance
+matrix but, the interpretations will differ depending on the
+assumptions. Graphing the low dimensional PC's (usually the first 2) is
+a common way to identify hidden patterns in the data such as outliers or
+clusters. The fixed effects model only makes assumptions about the
+dimensionality of the data, and incorporates knowledge about noise in
+the data to improve estimates. The results of the paper were that the
+fixed effects model incorporating CPCA (common PCA) out preformed all
+others. [@duras2022fixed] ]{style="color: #8B814C;"}
 
+## [Methods]{style="color: #191970;"}
 
-<span style="color: #8B814C;">**4. Applied Multivariate Statistical Analysis and Related Topics with R**</span>
-
-<span style="color: #8B814C;">
-This chapter goes over PCA basic's and how and why it is useful.  The overall goal of PCA is to minimize the number of predictive variables while maintaining most of the variation (70%~80% as a guideline, the book goes on to cover a few more rules of thumb for this). PCA is a good method for finding outliers since the principal components are linear combinations of the original data - plotting with lower dimensions makes them easier to spot. PCA is also useful when some of the predictor variables in a regression model are highly correlated, which if not addressed can lead to poor parameter estimates. The first PC explains the most variability in the data & each succeeding PC explains the most possible remaining variability. PCA analysis should be preformed on scaled/unit data, magnitudes must be comparable (use the correlation matrix instead of covariance OR standardize the data). [@lang2021applied]
-</span> 
-
- 
-<span style="color: #8B814C;">**5. The fixed effects PCA model in a common principal component environment**</span>
-
-<span style="color: #8B814C;">
-The article compares a fixed effects PCA model to the 2 most common approaches, descriptive algebraic and probabilistic. All three produce the same results using spectral decomposition of the sample covariance matrix but, the interpretations will differ depending on the assumptions. Graphing the low dimensional PC's (usually the first 2) is a common way to identify hidden patterns in the data such as outliers or clusters. The fixed effects model only makes assumptions about the dimensionality of the data, and incorporates knowledge about noise in the data to improve estimates. The results of the paper were that the fixed effects model incorporating CPCA (common PCA) out preformed all others.  [@duras2022fixed]
-</span>
-
-
-
-## Methods
-
-The common non-parametric regression model is $Y_i = m(X_i) + \varepsilon_i$, where
-$Y_i$ can be defined as the sum of the regression function value $m(x)$ for $X_i$.
-Here $m(x)$ is unknown and $\varepsilon_i$ some errors. With the help of this definition, we can create the estimation for
-local averaging i.e. $m(x)$ can be estimated with the product of $Y_i$ average
-and $X_i$ is near to $x$. In other words, this means that we are discovering
-the line through the data points with the help of surrounding data points.
-The estimation formula is printed below [@R-base]:
+The common non-parametric regression model is
+$Y_i = m(X_i) + \varepsilon_i$, where $Y_i$ can be defined as the sum of
+the regression function value $m(x)$ for $X_i$. Here $m(x)$ is unknown
+and $\varepsilon_i$ some errors. With the help of this definition, we
+can create the estimation for local averaging i.e. $m(x)$ can be
+estimated with the product of $Y_i$ average and $X_i$ is near to $x$. In
+other words, this means that we are discovering the line through the
+data points with the help of surrounding data points. The estimation
+formula is printed below [@R-base]:
 
 $$
 M_n(x) = \sum_{i=1}^{n} W_n (X_i) Y_i  \tag{1}
-$$
-$W_n(x)$ is the sum of weights that belongs to all real numbers. Weights
-are positive numbers and small if $X_i$ is far from $x$.
+$$ $W_n(x)$ is the sum of weights that belongs to all real numbers.
+Weights are positive numbers and small if $X_i$ is far from $x$.
 
-## Analysis and Results
-### Data and Vizualisation
+## [Analysis and Results]{style="color: #191970;"}
+
+### [Data and Vizualisation]{style="color: #191970;"}
+
 A study was conducted to determine how...
 
 ```{r, warning=FALSE, echo=T, message=FALSE}
@@ -96,7 +160,6 @@ library(ggthemes)
 library(ggrepel)
 library(dslabs)
 ```
-
 
 ```{r, warning=FALSE, echo=TRUE}
 # Load Data
@@ -116,10 +179,8 @@ ggplot1 = murders %>% ggplot(mapping = aes(x=population/10^6, y=total))
       theme_wsj()
 ```
 
-### Statistical Modeling
+### [Statistical Modeling]{style="color: #191970;"}
 
-### Conlusion
+### [Conlusion]{style="color: #191970;"}
 
-
-## <span style="color: #191970;">References</span>
-
+## [References]{style="color: #191970;"}
