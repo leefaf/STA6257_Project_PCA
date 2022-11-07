@@ -148,9 +148,27 @@ Weights are positive numbers and small if $X_i$ is far from $x$.
 
 ## [Analysis and Results]{style="color: #191970;"}
 
-### [Data and Vizualisation]{style="color: #191970;"}
+## [Data and Vizualisation]{style="color: #191970;"}
 
-A study was conducted to determine how...
+[Bacteria dataset from MASS package (220 rows X 6
+columns)]{style="color: #8B814C;"}
+
+[Dr A. Leach tested the effects of a drug on 50 children with a history
+of otitis media in the Northern Territory of Australia. The children
+were randomized to the drug or the a placebo, and also to receive active
+encouragement to comply with taking the drug. The presence of H.
+influenzae was checked at weeks 0, 2, 4, 6 and 11: 30 of the checks were
+missing and are not included in this data
+frame.]{style="color: #8B814C;"}
+
+[**Variables**]{style="color: #8B814C;"}
+
+- y - presence or absence: a factor with levels n and y 
+- ap - active/placebo: a factor with levels a and p 
+- hilo - hi/low compliance: a factor with levels hi amd lo 
+- week - numeric: week of test 
+- ID - subject ID: a factor 
+- trt - a factor with levels placebo, drug and drug+, a re-coding of ap and hilo
 
 ```{r, warning=FALSE, echo=T, message=FALSE}
 # loading packages 

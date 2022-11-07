@@ -195,9 +195,20 @@ M_n(x) = \sum_{i=1}^{n} W_n (X_i) Y_i  \tag{1}
 </section>
 <section id="analysis-and-results" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-and-results"><span style="color: #191970;">Analysis and Results</span></h2>
-<section id="data-and-vizualisation" class="level3">
-<h3 class="anchored" data-anchor-id="data-and-vizualisation"><span style="color: #191970;">Data and Vizualisation</span></h3>
-<p>A study was conducted to determine how…</p>
+</section>
+<section id="data-and-vizualisation" class="level2">
+<h2 class="anchored" data-anchor-id="data-and-vizualisation"><span style="color: #191970;">Data and Vizualisation</span></h2>
+<p><span style="color: #8B814C;">Bacteria dataset from MASS package (220 rows X 6 columns)</span></p>
+<p><span style="color: #8B814C;">Dr A. Leach tested the effects of a drug on 50 children with a history of otitis media in the Northern Territory of Australia. The children were randomized to the drug or the a placebo, and also to receive active encouragement to comply with taking the drug. The presence of H. influenzae was checked at weeks 0, 2, 4, 6 and 11: 30 of the checks were missing and are not included in this data frame.</span></p>
+<p><span style="color: #8B814C;"><strong>Variables</strong></span></p>
+<ul>
+<li>y - presence or absence: a factor with levels n and y</li>
+<li>ap - active/placebo: a factor with levels a and p</li>
+<li>hilo - hi/low compliance: a factor with levels hi amd lo</li>
+<li>week - numeric: week of test</li>
+<li>ID - subject ID: a factor</li>
+<li>trt - a factor with levels placebo, drug and drug+, a re-coding of ap and hilo</li>
+</ul>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -291,7 +302,6 @@ M_n(x) = \sum_{i=1}^{n} W_n (X_i) Y_i  \tag{1}
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
 <section id="statistical-modeling" class="level3">
 <h3 class="anchored" data-anchor-id="statistical-modeling"><span style="color: #191970;">Statistical Modeling</span></h3>
 </section>
