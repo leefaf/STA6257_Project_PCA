@@ -131,26 +131,11 @@ others. [@duras2022fixed]]{style="color: #8B814C;"}
 
 ## [Methods]{style="color: #191970;"}
 
-The common non-parametric regression model is
-$Y_i = m(X_i) + \varepsilon_i$, where $Y_i$ can be defined as the sum of
-the regression function value $m(x)$ for $X_i$. Here $m(x)$ is unknown
-and $\varepsilon_i$ some errors. With the help of this definition, we
-can create the estimation for local averaging i.e. $m(x)$ can be
-estimated with the product of $Y_i$ average and $X_i$ is near to $x$. In
-other words, this means that we are discovering the line through the
-data points with the help of surrounding data points. The estimation
-formula is printed below [@R-base]:
-
-$$
-M_n(x) = \sum_{i=1}^{n} W_n (X_i) Y_i  \tag{1}
-$$ $W_n(x)$ is the sum of weights that belongs to all real numbers.
-Weights are positive numbers and small if $X_i$ is far from $x$.
-
 ## [Analysis and Results]{style="color: #191970;"}
 
 ## [Data and Vizualisation]{style="color: #191970;"}
 
-[Bacteria dataset from MASS package (220 rows X 6
+[Bacteria dataset from MASS package (220 rows by 6
 columns)]{style="color: #8B814C;"}
 
 [Dr A. Leach tested the effects of a drug on 50 children with a history
@@ -187,6 +172,7 @@ library(ggthemes)
 library(ggrepel)
 library(dslabs)
 library(MASS)
+
 ```
 
 ```{r, warning=FALSE, echo=TRUE}
@@ -205,6 +191,7 @@ kable(head(bacteria))
   #ggtitle("US Gun Murders in 2010") +
   #scale_color_discrete(name = "Region")+
   #    theme_wsj()
+
 ```
 
 ## [Statistical Modeling]{style="color: #191970;"}

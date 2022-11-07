@@ -118,7 +118,6 @@ div.csl-indent {
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -188,17 +187,13 @@ div.csl-indent {
 </section>
 <section id="methods" class="level2">
 <h2 class="anchored" data-anchor-id="methods"><span style="color: #191970;">Methods</span></h2>
-<p>The common non-parametric regression model is <span class="math inline">\(Y_i = m(X_i) + \varepsilon_i\)</span>, where <span class="math inline">\(Y_i\)</span> can be defined as the sum of the regression function value <span class="math inline">\(m(x)\)</span> for <span class="math inline">\(X_i\)</span>. Here <span class="math inline">\(m(x)\)</span> is unknown and <span class="math inline">\(\varepsilon_i\)</span> some errors. With the help of this definition, we can create the estimation for local averaging i.e.&nbsp;<span class="math inline">\(m(x)\)</span> can be estimated with the product of <span class="math inline">\(Y_i\)</span> average and <span class="math inline">\(X_i\)</span> is near to <span class="math inline">\(x\)</span>. In other words, this means that we are discovering the line through the data points with the help of surrounding data points. The estimation formula is printed below <span class="citation" data-cites="R-base">(<a href="#ref-R-base" role="doc-biblioref"><strong>R-base?</strong></a>)</span>:</p>
-<p><span class="math display">\[
-M_n(x) = \sum_{i=1}^{n} W_n (X_i) Y_i  \tag{1}
-\]</span> <span class="math inline">\(W_n(x)\)</span> is the sum of weights that belongs to all real numbers. Weights are positive numbers and small if <span class="math inline">\(X_i\)</span> is far from <span class="math inline">\(x\)</span>.</p>
 </section>
 <section id="analysis-and-results" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-and-results"><span style="color: #191970;">Analysis and Results</span></h2>
 </section>
 <section id="data-and-vizualisation" class="level2">
 <h2 class="anchored" data-anchor-id="data-and-vizualisation"><span style="color: #191970;">Data and Vizualisation</span></h2>
-<p><span style="color: #8B814C;">Bacteria dataset from MASS package (220 rows X 6 columns)</span></p>
+<p><span style="color: #8B814C;">Bacteria dataset from MASS package (220 rows by 6 columns)</span></p>
 <p><span style="color: #8B814C;">Dr A. Leach tested the effects of a drug on 50 children with a history of otitis media in the Northern Territory of Australia. The children were randomized to the drug or the a placebo, and also to receive active encouragement to comply with taking the drug. The presence of H. influenzae was checked at weeks 0, 2, 4, 6 and 11: 30 of the checks were missing and are not included in this data frame.</span></p>
 <p><span style="color: #8B814C;"><strong>Variables</strong></span></p>
 <p><span style="color: #8B814C;"><strong>y</strong> - presence or absence: a factor with levels n and y</span></p>
