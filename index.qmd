@@ -38,7 +38,7 @@ editor:
 [**1. A comparative dimensionality reduction study in telecom customer
 segmentation using deep learning and PCA**]{style="color: #8B814C;"}
 
-[ This article compares PCA with a deep learning autoencoder on telecom
+[This article compares PCA with a deep learning autoencoder on telecom
 customer data. Goal is to segment customers based on 220 features to
 optimize customer satisfaction/loyalty. Raw data must be cleaned &
 standardized (z-score normalization) before applying PCA. A scree plot
@@ -46,12 +46,12 @@ was used to visualize the number of features to keep, which was 3 that
 explain \~72% of data. Using the absolute values of the eigenvectors
 they can decide wich features contribute the most to the first 3 PC's.
 Overall PCA saved \~90% of total variance with just 20 features,
-reducing original dataset by 200. [@Alkha] ]{style="color: #8B814C;"}
+reducing original dataset by 200. [@Alkha]]{style="color: #8B814C;"}
 
 [**2. Visualizing Psychological Networks: A Tutorial in
 R**]{style="color: #8B814C;"}
 
-[ Article aims to guide researchers on choosing the best/most
+[Article aims to guide researchers on choosing the best/most
 interpretable visualizations of psychological networks. These networks
 include mental disorder symptoms (specifically OCD and depression) and
 the connections/correlations between them. When plotting, the symptoms
@@ -67,13 +67,13 @@ comparing replications, and X/Y placement of nodes is interpretable
 (this being the primary benefit since nodes/symptoms can be compared
 right to left, X, or top from bottom Y). 1 major disadvantage of PCA is
 that it relies on the correlation matrix and nodes/symptoms can be
-difficult to see when they score similarly on both PC's. [@Jones]
-]{style="color: #8B814C;"}
+difficult to see when they score similarly on both PC's.
+[@Jones]]{style="color: #8B814C;"}
 
 [**3. SVM and PCA Based Learning Feature Classification Approaches for
 E-Learning System**]{style="color: #8B814C;"}
 
-[ This article aims to classify student learning attributes using PCA in
+[This article aims to classify student learning attributes using PCA in
 order to develop a simple methodology to optimize a students dynamic
 learning sequence based on their individual skill, needs and
 preferences, and also to maximize their learning outcome in computer
@@ -94,12 +94,12 @@ groups anxiety with study level. The article then goes on to use the 3
 PC's to fit 4 classification models, a neural network, quadratic SVM,
 gaussian SVM, and linear SVM. Linear SVM provided the highest accuracy,
 sensitivity, and specificity, outperforming the other kernal
-classifiers. [@Khamp] ]{style="color: #8B814C;"}
+classifiers. [@Khamp]]{style="color: #8B814C;"}
 
 [**4. Applied Multivariate Statistical Analysis and Related Topics with
 R**]{style="color: #8B814C;"}
 
-[ This chapter goes over PCA basic's and how and why it is useful. The
+[This chapter goes over PCA basic's and how and why it is useful. The
 overall goal of PCA is to minimize the number of predictive variables
 while maintaining most of the variation (70%\~80% as a guideline, the
 book goes on to cover a few more rules of thumb for this). PCA is a good
@@ -112,12 +112,12 @@ the most variability in the data & each succeeding PC explains the most
 possible remaining variability. PCA analysis should be preformed on
 scaled/unit data, magnitudes must be comparable (use the correlation
 matrix instead of covariance OR standardize the data).
-[@lang2021applied] ]{style="color: #8B814C;"}
+[@lang2021applied]]{style="color: #8B814C;"}
 
 [**5. The fixed effects PCA model in a common principal component
 environment**]{style="color: #8B814C;"}
 
-[ The article compares a fixed effects PCA model to the 2 most common
+[The article compares a fixed effects PCA model to the 2 most common
 approaches, descriptive algebraic and probabilistic. All three produce
 the same results using spectral decomposition of the sample covariance
 matrix but, the interpretations will differ depending on the
@@ -127,7 +127,7 @@ clusters. The fixed effects model only makes assumptions about the
 dimensionality of the data, and incorporates knowledge about noise in
 the data to improve estimates. The results of the paper were that the
 fixed effects model incorporating CPCA (common PCA) out preformed all
-others. [@duras2022fixed] ]{style="color: #8B814C;"}
+others. [@duras2022fixed]]{style="color: #8B814C;"}
 
 ## [Methods]{style="color: #191970;"}
 
