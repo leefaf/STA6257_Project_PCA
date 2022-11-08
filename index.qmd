@@ -247,7 +247,123 @@ dominant features selection. The system showed a high reliability of
 97.32% while meeting the stability criteria of 5%. The coronary artery
 disease risk assessment is automated given the vessel wall region of the
 coronary artery. The results are promising leading to the prototype
-design for a clinical setup. [@Chen2017]]{style="color: #8B814C;"}
+design for a clinical setup. [@Arak2016]]{style="color: #8B814C;"}
+
+[**8. Facial recognition with PCA and machine learning
+methods**]{style="color: #8B814C;"}
+
+[From the this Paper the authors have identified that the best way to
+compare and evaluate the Facial Recognition results with speed and
+accuracy was with PCA (Principal Component Analysis) and as well as
+Support Vector Machine (SVM). PCA is a to find the principal components
+of a given set of images and represent each face image as a smaller size
+in lower dimensional face space using the eigenvectors that correspond
+to higher eigenvalues. Here the author see's the PCA provides an
+expression of an input image in terms of a set of basis images that
+appear as "EigenFaces". The eigenfaces can then be used to identify the
+individual face from the set of ORL Data Base of Faces. In the SVM a
+Given a set of training examples were created and each of them is marked
+as belonging to one class. An SVM training algorithm was build to a
+model to assign a new example to one class. The SVM model, is a
+representation of the examples as points in space and maps these
+examples to classes, which are divided by a clear gap as wide as
+possible. There New examples can be mapped into the same space and
+predicted to belong to the class based on which side of the gap they
+fall. Other Mentions were that KNM K Nearest Neighbor another well-known
+method of classification was used and that uses each class is a cluster
+and the data points belong to a cluster. Where the locations of clusters
+need to be determined (cluster center), as well as which data points
+belong to which cluster. It finally concludes that based on the three
+different methods of facial recognition it showed that SVM/PCA is the
+best choice for data with little sensitivity to running speed and a
+strong desire to get higher recognition
+accuracy.[@Chen2017]]{style="color: #8B814C;"}
+
+[**9. A Comparison of Linear and Non-Linear Machine Learning Techniques
+(PCA and SOM) for Characterizing Urban Nutrient
+Runoff**]{style="color: #8B814C;"}
+
+[The following Study was based on an analysis of the Linear Machine
+learning ( In this Paper we look at , the principal component analysis
+(PCA) for the linear technique and the self-organizing map (SOM) for the
+nonlinear technique) and supported by Spearman's rank correlation
+coefficient (ρ). The Dataset for the models was from a monitoring
+campaign was carried out in SB to collect precipitation, flow rate, and
+water quality records. Summaries of the observed rainfall-runoff
+(antecedent dry period (ADP), total rainfall, event duration, maximum
+rainfall intensity, runoff volume, and runoff peak) and water quality
+(minimum, maximum, and event mean concentration (EMC)) data are
+presented in Tables 1 and 2. Here the main objective of the ML of PCA
+and SOM is reducing the dimensionality of a dataset that contains a
+large number of interrelated variables while preserving most of the
+dataset variance that was collected. Each Data Algorithm was used in
+Python3.8 when simulated and The first aspect that was compared between
+PCA and SOM was the ability to correlate rainfall characteristics to
+water quality variables, in other words, to correctly represent build-up
+and wash-off processes To conclude this experiment it was understood
+that the primary purpose of this work was the comparison of linear and
+non-linear ML techniques, PCA and SOM, respectively, to characterize
+urban nutrient runoff. In particular, this comparison was based on three
+main aspects: (i) the ability to represent the correlation among the
+variables chosen to represent the system and, therefore, depict the
+build-up and wash-off processes (cause--effect process) (feature
+correlation); (ii) the ability to group the dataset based on the two
+variables that symbolize build-up and wash-off processes (data point
+grouping); (iii) the ability to identify and quantify the importance of
+each variable (feature importance).
+[@Gorg2021]]{style="color: #8B814C;"}
+
+[**10. Machine Learning based Multiscale Reduced Kernel PCA for
+Nonlinear Process Monitoring**]{style="color: #8B814C;"}
+
+[This paper surround the importance of monitoring Faulty Detections.
+Fault detection (FD) is fundamental for monitoring several chemical
+processes. Thus, this paper introduces a novel structure multiscale
+reduced kernel principal component analysis (MS-RKPCA). Here the paper
+aims to address the problem of great computation time and significant
+storage memory space by using a data reduction structure based on the
+Euclidean distance metric. The paper talks about Process monitoring of
+chemical systems is important and essential to observe the best
+functioning and to ameliorate the product quality of various industrial
+processes. Here it shows Many data-driven techniques have been proposed
+and they have been statistically assessed for linearly separable data.
+The linearly data driven approaches including principal component
+analysis(PCA), and partial least squares (PLS) . These techniques have
+been widely applied for dimensionality reduction and they are effective
+for modeling and monitoring chemical processes . PCA is extensively
+applied for monitoring industrial process. It has proven successful
+results for fault detection of the linear process But now However,
+popular complex chemical systems exhibit a great nonlinear correlation
+between their variables. Then, common chemical systems demand nonlinear
+techniques in order to execute tasks that implicate successfully
+modeling and monitoring methods Recently, a nonlinear PCA (KPCA) method
+has been proposed KPCA technique can efficiently operate the intricate
+spatial structure of high-dimensional feature spaces using integral
+operators and the notion of kernel tricks . KPCA method purposes to
+project the input data onto the feature space by nonlinear kernel
+functions and then to perform PCA in that feature space. However most
+complex industrial process data are extremely correlated which leads to
+a problem when analyzing large process data . Therefore, the first
+contribution of this paper is to propose an alternative method called
+reduced KPCA (RKPCA) for dealing with the issue of intended storage
+space, and elevated computation time. The improved RKPCA method consists
+of using the Euclidean distance to keep an observation in case of
+redundancy between observations. It is noted Thus, RKPCA accelerates the
+evaluation of the test sample and also saves the memory of keeping the
+trained sample. The obtained reduced data contains the most relevant
+information about the dataset. To be effective, any FD technique must
+rely on the goodness of the process data. To conclude , a technique that
+merges a size reduction framework and wavelet analysis is proposed to
+monitor nonlinear processes and enhance the fault detection ability of
+conventional KPCA. The key view of the developed technique is to apply
+the multiscale representation on the reduced dataset using the Euclidean
+distance metric in order to improve the modeling abilities and provide
+good effectiveness over the KPCA model. The Tennessee Eastman Process
+(TEP) data is used to validate the effectiveness of the develop method.
+The results demonstrate the effectiveness of the proposed multiscale
+reduced KPCA (MS-RKPCA) approach over both RKPCA and KPCA models to
+increase the computation times and to ensure the quality of the
+detection (MDR and FAR).[@Dhibi2020]]{style="color: #8B814C;"}
 
 ## [Methods]{style="color: #191970;"}
 
