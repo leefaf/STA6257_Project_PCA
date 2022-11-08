@@ -365,17 +365,16 @@ reduced KPCA (MS-RKPCA) approach over both RKPCA and KPCA models to
 increase the computation times and to ensure the quality of the
 detection (MDR and FAR).[@Dhibi2020]]{style="color: #8B814C;"}
 
-\[**11.** \]
+[**11. Principal Component Analysis**]{style="color: #8B814C;"}
 
 [This is a brief article discussing the accumulation of error when
 applying PCA to large datasets and how to locate important patterns when
 using the method and how scaling can affect the dataset being analyzed.
-It provides several graphs and figures. Lever, J., Krzywinski, M., &
-Altman, N. (2017, July). Principal component analysis. Nature Methods,
-14(7), 641-642. Retrieved from Academic
-OneGile.]{style="color: #8B814C;"}
+It provides several graphs and
+figures.[@Lever]]{style="color: #8B814C;"}
 
-\[**12.** \]
+[**12. PCAtest: Testing the Statistical Significance of Principal
+Component Analysis in R**]{style="color: #8B814C;"}
 
 [This article begins with a brief history of PCA and then moves on to
 discuss an R package known as PCAtest which implements permutation-based
@@ -385,42 +384,36 @@ procedure that calculates various statistics related to PCA. From there
 the article discusses the results of an example dataset that has been
 analyzed using PCA and then that PCA analyzed using PCAtest. Visuals and
 graphical aids are included. Finally the article concludes by discussing
-when to use PCA and how to interpret the results. Camargo A. 2022.
-PCAtest: testing the statistical significance of Principal Component
-Analysis in R. PeerJ 10:e12967 DOI
-10.7717/peerj.12967]{style="color: #8B814C;"}
+when to use PCA and how to interpret the results.
+[@Camargo]]{style="color: #8B814C;"}
 
-\[**13.** \]
+[**13. Principal Component Analysis**]{style="color: #8B814C;"}
 
 [This article is a brief overview of PCA and describes the methods used
 throughout the process of performing PCA while mentioning its
 application in facial recognition software and then mentioning some
-advantages and disadvantages of using the method. Journal of Signal and
-Information Processing, 2013, 4, 173-175 doi:10.4236/jsip.2013.43B031
-Published Online August 2013
-(http://www.scirp.org/journal/jsip)]{style="color: #8B814C;"}
+advantages and disadvantages of using the method.
+[@Sasan]]{style="color: #8B814C;"}
 
-\[**14.** \]
+[**14. Exploration of Principal Component Analysis: Deriving Principal
+Component Analysis Visually Using Spectra**]{style="color: #8B814C;"}
 
 [This article introduces PCA and then goes on to describe methods and
 providing examples of PCA while using spectral graphs as visual aids. A
 brief description of the matrix theory behind PCA is analyzed through
 the use of spectral graphs and finally instructions on how to interpret
-results from PCA is given as a general model. Exploration of Principal
-Component Analysis: Deriving Principal Component Analysis Visually Using
-Spectra. (2020, December 21). Applied Spectroscopy, 75(4), 361-375.
-doi:10.1177/0003702820987847]{style="color: #8B814C;"}
+results from PCA is given as a general model.
+[@Beattie]]{style="color: #8B814C;"}
 
-\[**15.** \]
+[**15. Principal Component Analysis: A Review and Recent
+Developments**]{style="color: #8B814C;"}
 
 [This article describes PCA's usefulness in data science and in dealing
 with large datasets and from there gives a basic description of the
 methods involved in PCA followed by an example. The article then
 proceeds to discuss some issues related to PCA while providing plots and
 visuals and then examines some adaptations of PCA with examples
-included. Jolliffe IT, Cadima J. 2016 Principal component analysis: a
-review and recent developments.Phil. Trans. R. Soc. A 374: 20150202.
-http://dx.doi.org/10.1098/rsta.2015.0202]{style="color: #8B814C;"}
+included. [@Jolliffe]]{style="color: #8B814C;"}
 
 ## [Methods]{style="color: #191970;"}
 
