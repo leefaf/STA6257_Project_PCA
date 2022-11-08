@@ -129,6 +129,126 @@ the data to improve estimates. The results of the paper were that the
 fixed effects model incorporating CPCA (common PCA) out preformed all
 others. [@duras2022fixed]]{style="color: #8B814C;"}
 
+[**6. Microaneurysm Detection Using Principal Component Analysis and
+Machine Learning Methods**]{style="color: #8B814C;"}
+
+[The Following paper follows the use of Principal Component Analysis and
+Machine Learning Methods with recognizing Microanerysm. Here Diabetic
+Retinopathy (DR) is a progressive disease with almost no early symptoms
+of vision impairment,which is the leading cause of blindness prior to
+the age. As a result The first detectable sign of DR is the presence of
+microaneurysms (MAs), which result from leakage of tiny blood vessels in
+the retina and manifest themselves as small red circular spots on the
+surface of retinas. Early detection of MAs is critical for diagnosis and
+treatment of DR, which has led to a great deal of research towards
+automatic detection of MAs. The paper relays that Many existing MA
+detection methods rely on hand-crafted features, which are often based
+on low-level information. Lowlevel information is easily susceptible to
+signal drift artifacts and thus prevent reliable generalization among
+different research sites. A recent method \[1\] leveraged the use of
+deep learning for MA detection using a Stacked Sparse Autoencoder
+(SSAE). Deep learning approaches often learn high-level and robust
+attributes directly from the raw signal input, and have been
+successfully applied to various classification and recognition tasks
+\[8\]--\[10\]. In \[1\], small image patches were generated from the
+original fundus images and used by the SSAE to learn high-level features
+from pixel intensities. These patches were then classified as either MA.
+The goal is to determine whether traditional machine learning methods
+can achieve similar or better performance on the same fundus image
+dataset by exploring the full context of the image information,
+especially when the size of the dataset may be too limited for reliably
+training deep learning The Dataset analyzed DIARETDB1 \[11\] images that
+were acquired from 89 patients, in which each image was manually
+annotated by multiple experts at Kuopio hospital. 84 of the 89 patients
+contained at least mild non-proliferative signs of DR, while the
+remaining five patients were healthy with no signs of DR. Classification
+of MA vs non-MA patches was performed using three sets of features. The
+first feature set consisted of raw pixel intensities, rasterized from
+the image patch. principal component analysis (PCA). A common feature
+dimensionality reduction method. PCA projects data onto a new space in
+which consecutive dimensions contain less and less of the variance of
+the original data space and compresses the most important information
+onto a subspace with lower dimensionality than the original space. The
+machine learning methods employed in this work include RF, NN, and SVM.
+the methods outperformed previous work that conducted deep learning
+using the same database, measured by both AUC and F-measure. Further
+validation of our method on a different dataset ROC showed similar
+results as we found on DIARETDB1. Our results yield a promising step
+towards automated early detection of microaneurysms and diabetic
+retinopathy. Three interesting results were observed in our findings.
+First, after application of PCA to the original 625-dimensional
+dataspace, SVMs achieved near maximum performance using only 30% of
+data. With the incorporation of more principal components, the
+performance of the SVM plateaued, while the performance of the RF and NN
+both decreased. Second, by reducing dimensionality using RF feature
+importance, they were able to achieve high AUC with fewer dimensions and
+maintain this high AUC as more dimensions were included. Third, when we
+trained the random forest on DIARETDB1 and used ROC as the testing data,
+the performance was similar as that achieved by the random forest
+trained and tested on the ROC dataset using cross-validation.
+[@Cao2018]]{style="color: #8B814C;"}
+
+[**7. PCA-based polling strategy in machine learning framework for
+coronary artery disease risk assessment in intravascular ultrasound: A
+link between carotid and coronary grayscale plaque
+morphology**]{style="color: #8B814C;"}
+
+[The following paper reflects on a novel strategy for risk
+stratification based on plaque morphology embedded with principal
+component analysis (PCA) for plaque feature dimensionality reduction and
+dominant feature selection technique. The paper leads the major cause of
+morbidity in the world is due to cardiovascular disease (CVD). These
+diseases occur due to atherosclerosis a progressive and slow process of
+narrowing the artery, interrupting the flow of blood from the heart or
+to the brain. Today The current-state-of-art methods for screening the
+severity of this disease is: computed tomography (CT), ultrasound(US),
+and magnetic resonance imaging (MRI). However Due to radiation ,CT may
+compromise the patients' safety, but it is often used because it
+computes a calcium score in the coronary artery. It cover two hypothesis
+: First : We thus hypothesize that different components offer different
+risk factors and when combined as a whole using the grayscale wall
+region image can be used for tissue characterization. We can thus
+lever-age to study the morphological characteristics of these lesions
+and adapt a machine learning paradigm to predict the risk of severity of
+CAD leading to myocardial infarction. Here the paper will explores the
+novel concept of morphological characteristics utilizing the coronary
+vessel wall region that possesses these plaque components. Second : They
+hypothesize that cIMT can be adapted for developing a link between the
+coronary plaque burden leading to coronary artery disease or carotid
+artery disease leading to stroke. This is due to the correlation between
+automated cIMT that includes bulb plaque and SYNTAX score. Based on the
+experiment regarding the role of the two hypotheses, they present the
+two experimental protocols based on that foundation. The two major
+hypotheses were: (i) risk associated with the components of the coronary
+artery vessel wall and (ii) ability of carotid IMT to characterize the
+cardiovascular risk. There protocol design demonstrates the machine
+learning paradigm for risk assessment using the combination of (a)
+grayscale PCA-based dominant features of the coronary artery wall and
+(b) the gold standard subclinical risk biomarker -- the carotid IMT
+during the learning-phase that generates the offline coefficients. The
+testing-phase utilizes the PCA-based dominant feature extraction which
+is then transformed by the offline coefficients. Based on Results the
+best feature combination using PCA-based polling. The section then
+details which kernel function is best suitable using the PCA-based
+optimization for a fixed data size N. It is then concluded that
+presented a coronary artery risk assessment system by taking two key
+hypothesis: (i) there is a coronary artery disease risk associated with
+vessel wall region consisting of different plaque components such as:
+fibrous, fibrolipidic, calcified and calcified-necrotic; (ii) coronary
+risk label is derived using the carotid intima-media thickness biomarker
+that was used as a gold standard for design and development of machine
+learning system for coronary artery disease risk assessment and
+stratification. The computer-aided diagnosis system based on machine
+learning utilizing PCA-based feature selection criteria is able to
+classify the high risk and low risk coronary artery disease patients
+with high accuracy reaching close to 98.50%. We demonstrated that
+PCA-based feature selection using polling method is highly suitable for
+dominant features selection. The system showed a high reliability of
+97.32% while meeting the stability criteria of 5%. The coronary artery
+disease risk assessment is automated given the vessel wall region of the
+coronary artery. The results are promising leading to the prototype
+design for a clinical setup. [@Chen2017]]{style="color: #8B814C;"}
+
 ## [Methods]{style="color: #191970;"}
 
 ## [Analysis and Results]{style="color: #191970;"}
