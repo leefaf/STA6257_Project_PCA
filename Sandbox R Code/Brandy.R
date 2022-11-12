@@ -82,6 +82,69 @@ summary(pca)
 pca$loadings
 
 
+################################################################################################
+################################################################################################
+
+
+######### NEW (better) Dataset 
+######### CCES 2018 DKU
+
+
+#### upload file to github instead of reading from local file
+
+DKU<- read.table("C:/Users/b/Downloads/CCES18_DKU_OUTPUT_vv.tab", header=T, sep="\t")
+
+#DKU %>% count(caseid, sort=T) %>% filter(n>1) # check for duplicate respondees
+
+prop.table(ftable(DKU$DKU397, DKU$gender), 2)
+prop.table(ftable(DKU$DKU397, DKU$race), 2)
+
+DKU$race2<- ifelse(DKU$race==1, "White", "Not White")
+DKU$gender2<- ifelse(DKU$gender==1, "Male", "Female")
+DKU$flatEarth<- ifelse(DKU$DKU397==1, "False", 
+                       ifelse(DKU$DKU397==2, "Probably False",
+                              ifelse(DKU$DKU397==3, "Probably True",
+                                     ifelse(DKU$DKU397==4, "True", "Skipped"))))
+
+
+round(100*(prop.table(ftable(DKU$flatEarth[DKU$flatEarth!="Skipped"], DKU$race2[DKU$flatEarth!="Skipped"]), 2)), 0)
+
+round(100*(prop.table(ftable(DKU$CC18_321f, DKU$gender2), 2)), 0)
+
+
+DKU %>% count(race)
+
+DKU %>% count(CC18_335)
+
+rowSums(((DKU %>% count(CC18_300d_1,
+                        CC18_300d_2,
+                        CC18_300d_3,
+                        CC18_300d_4,
+                        CC18_300d_5))-1)[,-6])
+
+
+## reduce tax rate for households earning >500k
+CC18_325f_new == 1 (support)
+
+
+### subset using only scale/factor variables -- group PCA analysis by flatearth scaled groups
+# rename headers
+# remove missing/NA values
+# order/level factors
+# standardize all vars
+# scatter plot first 2 PCs color points based off flatearth group
+# analyze loadings between groups
+
+
+keepHeaders<- c("educ","race","marstat","votereg","region","CC18_301","CC18_302","CC18_316","CC18_335","ownhome","immstat","employ","urbancity","union","internethome","internetwork","sexuality","trans","religpew","DKU312","DKU313","DKU387","DKU391","birthyr","DKU385","DKU386","CC18_308a","CC18_308b","CC18_308c","CC18_308d","CC18_334A","CC18_334D","CC18_334E","CC18_334F","pid3","pid7","pew_religimp","pew_churatd","pew_prayer","ideo5","newsint","faminc_new","DKU305","DKU306","DKU307","DKU308","DKU309","DKU310","DKU311","DKU360","DKU361","DKU362","DKU363","DKU364","DKU373","DKU374","DKU375","DKU376","DKU377","DKU378","DKU379","DKU380","DKU393","DKU394","DKU395","DKU396","DKU397","DKU398")
+DKU2<- DKU[,names(DKU) %in% keepHeaders]
+
+
+
+
+
+################################################################################################
+################################################################################################
 
 # UNUSED CODE
 # RE-CODE y AS INT
